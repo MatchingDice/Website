@@ -1,0 +1,49 @@
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .print-area, .print-area * {
+        visibility: visible;
+    }
+}
+
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+@media print {
+    .print-area {
+        transform-origin: top left;
+        transform: scale(0.8);
+    }
+}
+
+@media print {
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    .print-area {
+        margin: 10mm;
+    }
+}
+
+@media print {
+    @page {
+        size: A4; /* or your preferred page size */
+        margin: 10mm;
+    }
+}
+
+@media print {
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    .print-area {
+        margin: 10mm;
+    }
+}
