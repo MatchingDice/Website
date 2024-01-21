@@ -1,344 +1,354 @@
-<div style='font-family:Arial, sans-serif; text-align:center;'>
-    <h1>Matching Dice</h1>
-    <h3>Any pair of dice will have 1 matching number in common.(<a href='https://www.youtube.com/watch?v=VSSEJKsgnuo' target='_blank'>YouTube Video</a>)</h3>
-    <h4>To make: Buy a 30-count of 16mm blank dice (<a href='https://amzn.to/48EGz7a' target='_blank'>link</a>) and write the numbers on them below.</h4>
-    <p>(Write each 6 with a curved line and each 9 with a straight line to be able to differentiate them.)</p>
-    <div style='display: flex; justify-content: center;gap: 20px;'>
-        <div style='display: flex; max-width: 960px;'>
-            <div style='display: flex; flex-direction: column; align-items: flex-start;margin-left:0px;'>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 1</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
+<html>
+    <head>
+        <title>Matching Dice</title>
+        <meta property="og:title" content="Matching Dice" />
+        <meta property="og:description" content="Instructions and numbers for creating your own Matching Dice game.">
+        <meta property="og:image" content="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBSgFKAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAJ2AnYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpDSUppK0ICiiigYtFFFAgooooGFFFFACiiiigApaKKACiiloAKKKKACiiikAtFFFABRRRQAUUUUAFLSUtABRiiloATFFLRQAlLRRQAUUUUAFFFFABS0UUAFFFLQAlLRRQAUUUUAFFFFABRRRQAUUtFAxKWiigAooooEFFLRQMKKKKACiiigAooooEFFFFABRRRQAUUUUAFFFFABRRS0AJS0UUAFLSUtIYUUtFMRSNJSmimISilooGFFLRQAlFLRikAUYopaAEpaKKACilooAKKKWgBKWjFFABRRRQAUUtFABSUtFABRRRQAUUtFABRRRQAUUUUAFFFFABRS0UAJS0UtACUUtFABiiiigAoopaAEopaKBiUUtFABRRRQAUUtFACUUtFAhKWiigAooooAKKKKACiiigAooooAKKWikAlFLRQAlFLRQAlLRRQAYopaSgYUUUUAFLRRQAtFFFAFOkpcUlUIKKXFFABRRS0AJS0UUgCiiloAKKKKACiloxQAUUUtACUUtFABijFLRQAmKWiigAooooAKKWigBKWiigAooooAKKMUYoAKKWigAxRRRQMKKKWgQlFLRQMKKKKACiiigAoopaAEopaKBCUtFFABRRRQAUUUtACUUtFIAooooASilooGJRS0UCCkpaKACijFLQMSilooAKSlooAKKKKACiijFABRRiigQUtJS0AFFFFAynRS0VQhKWiigAoopaQCUUtFABRRRQAUtFFABRS0UAFFLRQAUUUUAFFFLQAlLiiigAopcUYoASilooATFLRRQAUUUUDCilooASilooAKKKKACiiloASilooEJS0UUAFFFFAwooooEFFFFABRS0UhhRRRQAUUtJQAUUtFABRRijFABRRRQIKKKKBhRRRQAUUUUCCiiloASilooASilooAKKKKACiiigAoopaBhRRRQBTopaKoQlFLRSAKKKKAFooooAKKKWgBKXFFFABS0UUAFFLRQAlLRRQAUUtFABRRRQMKKWigQlLRRQMKKKKACiiloASilooASloooAKKKKBBRRRQAUUtFIBKKWigYlFLRQAlFLRQAUUUtABiiiigAoxRRQIMUYopaAEpaKKBhRRRQAUUUUAFFFFABRRRQAUUUtACUUtFACUUUtACUUtJQAUUtFABRRRQAUUUUAFFLRQBUpKdSVQhKKWikAUUUUAFFLRQAUUtFABRRS0AJRS0CgAopaKADFFFLQMSloooAKKKKACiiloASloooAKKKKBBRS0UAJRS0UDEopaKQBRS0YoATFFLRQAlFLRQAlFLRQAlLijFFABRRRQAUUUtACUUtFACUtFFABRRS0AJRS0UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRSigAFFLRQBUpKWimISilooAKKKKAFooooAKKKWgAoopaACiiigYUUtFABRRS0AJS0UUCCiiigAopaKBhRRS4pAJS0U5UZugoAbQAScCp1t/7x/AVKqhfujFFwIEgY/e4qT7OmO+fXNS0UrgV2t2H3TmoipXgjFXaCobgjNFwKNLVhoAfunFRNEy9Rx7UwGUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUtFACUtFFABRRRQAUUUUAFFFFABRS0UAJRS4ooASilooASilxRQAUlLRigBKKXFFACUUuKMUAJS0UUAFFFFABRRRQAtFFFAFSiiimIKKWigAooooAKWkpaACilooAKKKWgAoopaBiUUtFABRRRQAUUtFIQUUtGKBiUtKqlugzUqwf3j+VAENSLCx68D3qdVC9BiloAYsSr2yfepKKKQC0UlAoGLRRRQAUtJRQAtFFFIBjRq3UVE0BH3TmrFFO4FMqQeRikq6QCORUTQKfu8UXEV6KkaJl7Z+lMpgJRS4oxQAlFLijFACUYpaSgAooooAKKKKACloooAKKKKACiiigAopaMUAJRS4ooASilooASloooAKKKKACiiigAoxRRQAUUUUAFFFFABRRRQAUUUUAVaKKKYgooooAKWiigApRRRQAUtFFAwooooAKWiigQUtFFIYUUUoBJwBmmAUYqVYSfvHFSqir0FICBYmbtge9SrEo68mn0tFwsAooopAFFFU9V1O20ixe7u32ovAA6sfQe9Ay5VG/1rTNOyLy9hiYfw7st+Q5rzLWvGOqao7LHK1rbnpHEcHHu3U/yrnwGdsAFmJ+pJoA9QuPiDo8RIiS5n91QAfqR/KqTfEm2B+TTpSPeQD+lYOmeBtXvlDyolpGe8x+b/vkc/nit2P4awhf3mpyFv9mIAfzpATQ/EiwYjzrG4QeqlW/wra0/xbouoMEjvFjkP8Ew2H8zx+tcF4k8G3Gh2v2tLhLi3BAY42suenHeuZoA9+ByMiivJ/B/iO90/UbezaRprSaQRmNjnbk4yvp9K9YoAKWkooAWiiigAooooAKa0at1FPooArtCR905qMgjqMVboIB6incRUoqdoVPTio2jZe2fpTuAyiiigApKWigBKKWigBKWiigBMUtFFABRRRQAUUUtACUUtFACUUtFACUUtFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBVooopiCiiloASloooGFLRRQAUUUtABRRRQAUtJQXjVgruFJ7UgFp6ozdBUkYjIypB96koAjWEDqc1IAAOBiilpAFFFFAxaKSigBaKSloAK8/wDiLZ6nc3sEkUEstlHHx5algrZ5yB07V6BRQB4Slpcu+xLeVm9A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iiigBaKSikAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRSUUALRSUUALRSUUALRRRQBUpKWiqEJS0lFAC0UlLQAUUUUALRRRQAUUUUAFFFFABRRRQAlFLSUAFFGKMUAFJS0UAJRS0UAJSYp1GKAG4oxS0UANxRinYoxQA3FGKdijFADcUYp2KMUANxS4pcUuKAG4pcUuKXFADcUuKdiigBMUuKWloATFKBRS0AGKKWikAUtFFAwpaKKAClpKKAFooooAKWkooAWikpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAqUUUUxBRRRQAUtJS0AFFFFAAKWkpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoxS0lABSUtFABijFFFACYpcUUtACYoxS0UAJiloooAKKWigAoopaADFFFLSGAFGKKWgQUUUUDFooooAKKKKAFopKKAFpaSigBaKSigBaKKKACijNFABRRRQAUUUUALRSUUAFFFFABRRRQAUUUUAFFFFABRSZooAWikpaACiiigCrRRRTEFFFFABRRRQAtFJRQAtFFFAC0UlGaAFooooAKKKKACiiigAooooAKKWigAooooAKKKKBhRRRQIKKKKBhRRS0AFFFFABRRRQIKKKWgAoopaQwooooAKWkooELRRRQAUtJS0DCikpaACiiigAooooAWikooAWikooAWikpaAClpKM0ALSUZozQAtFJmigAopKKAFozSUUALRSUUALRSUUALSUUUALRSUUAOopKKAK9JRRVCCiiikAUUUUAFFFFAC0UUUAFFFFAC0UUUAFFFFABRRRQAUtFFABRRRQMKKKKAFooooEFFFFABRRRQAUUUUAFFFFABRRRQAtFFFIBaKKKYwoxRRSEFFFFAxaKKKACloooAKSiigBaKKKACiiigQUUUUDCiiigAooooAKKKKACiiigAooooAKKKKAFpKKKACiiigAooooAKKKKACiiigAooooA/9k="/>
+    </head>
+    <body>
+        <div style='font-family:Arial, sans-serif; text-align:center;'>
+            <h1>Matching Dice</h1>
+            <h3>Any pair of dice will have 1 matching number in common.(<a href='https://www.youtube.com/watch?v=VSSEJKsgnuo' target='_blank'>YouTube Video</a>)</h3>
+            <h4>To make: Buy a 30-count of 16mm blank dice (<a href='https://amzn.to/48EGz7a' target='_blank'>link</a>) and write the numbers on them below.</h4>
+            <p>(Write each 6 with a curved line and each 9 with a straight line to be able to differentiate them.)</p>
+            <div style='display: flex; justify-content: center;gap: 20px;'>
+                <div style='display: flex; max-width: 960px;'>
+                    <div style='display: flex; flex-direction: column; align-items: flex-start;margin-left:0px;'>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 1</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 2</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 3</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 4</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 5</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 6</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 7</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 8</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 9</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 10</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 11</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 12</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 13</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 14</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 15</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 2</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 3</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 4</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 5</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 6</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 7</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 8</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 9</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 10</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 11</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 12</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 13</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 14</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 15</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
-                    </div>
-                </div>
-            </div>
-            <div style='display: flex; flex-direction: column; align-items: flex-start;margin-left:30px;'>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 16</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 17</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 18</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 19</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 20</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 21</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 22</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 23</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 24</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 25</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 26</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 27</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 28</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 29</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
-                    </div>
-                </div>
-                <div style='display: flex; align-items: center; margin-bottom: 10px;'>
-                    <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 30</div>
-                    <div style='display: flex;'>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
-                        <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
+                    <div style='display: flex; flex-direction: column; align-items: flex-start;margin-left:30px;'>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 16</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 17</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>11</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 18</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 19</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 20</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>26</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 21</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>17</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 22</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>16</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>19</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 23</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>22</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 24</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>9</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>31</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 25</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>3</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>1</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 26</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>18</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>28</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 27</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>8</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>6</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>29</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>12</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 28</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>24</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>5</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>27</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>13</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 29</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>21</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>23</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>14</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>4</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>7</div>
+                            </div>
+                        </div>
+                        <div style='display: flex; align-items: center; margin-bottom: 10px;'>
+                            <div style='margin-right: 10px; width: 60px; text-align: right;'>Dice 30</div>
+                            <div style='display: flex;'>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>10</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>30</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>15</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>25</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>20</div>
+                                <div style='margin: 5px; border: 1px solid black; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;font-size:x-large;'>2</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </body>
+</html>
